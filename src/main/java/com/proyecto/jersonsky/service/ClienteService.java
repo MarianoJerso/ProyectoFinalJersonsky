@@ -1,6 +1,6 @@
-package service;
+package com.proyecto.jersonsky.service;
 
-import model.Cliente;
+import com.proyecto.jersonsky.model.Cliente;
 
 import java.util.List;
 
@@ -12,4 +12,6 @@ public interface ClienteService {
     Cliente crearCliente(Cliente cliente);
 
     Cliente actualizarCliente(Cliente cliente);
+
+    String borrarCliente(int id);
 }

@@ -1,4 +1,4 @@
-package dto;
+package com.proyecto.jersonsky.dto;
 
 import java.math.BigDecimal;
 

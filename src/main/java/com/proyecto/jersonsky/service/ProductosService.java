@@ -1,7 +1,6 @@
-package service;
+package com.proyecto.jersonsky.service;
 
-import model.Cliente;
-import model.Productos;
+import com.proyecto.jersonsky.model.Productos;
 
 import java.util.List;
 public interface ProductosService {
@@ -13,4 +12,6 @@ public interface ProductosService {
     Productos crearProducto (Productos productos);
 
     Productos actualizarProducto(Productos productos);
+
+    String borrarProducto (int id);
 }

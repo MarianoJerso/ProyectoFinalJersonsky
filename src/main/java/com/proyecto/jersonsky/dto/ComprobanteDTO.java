@@ -1,6 +1,6 @@
-package dto;
+package com.proyecto.jersonsky.dto;
 
-import model.Cliente;
+import com.proyecto.jersonsky.model.Cliente;
 
 import java.math.BigDecimal;
 import java.util.Date;

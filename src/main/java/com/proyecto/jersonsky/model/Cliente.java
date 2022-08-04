@@ -1,4 +1,4 @@
-package model;
+package com.proyecto.jersonsky.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

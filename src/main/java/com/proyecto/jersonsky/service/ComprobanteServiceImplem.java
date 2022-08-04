@@ -1,15 +1,19 @@
-package service;
+package com.proyecto.jersonsky.service;
 
-import dto.ComprobanteDTO;
-import dto.LineaDTO;
-import model.*;
+import com.proyecto.jersonsky.dto.ComprobanteDTO;
+import com.proyecto.jersonsky.dto.LineaDTO;
+import com.proyecto.jersonsky.model.*;
+
+import org.hibernate.service.spi.InjectService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import repository.ClienteRepository;
-import repository.ComprobanteRepository;
-import repository.ProductosRepository;
-
+import com.proyecto.jersonsky.repository.ClienteRepository;
+import com.proyecto.jersonsky.repository.ComprobanteRepository;
+import com.proyecto.jersonsky.repository.ProductosRepository;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,7 +21,6 @@ import java.util.*;
 
 @Service
 public class ComprobanteServiceImplem implements ComprobanteService {
-
     @Autowired
     private ComprobanteRepository comprobanteRepository;
 
@@ -29,6 +32,7 @@ public class ComprobanteServiceImplem implements ComprobanteService {
 
     @Autowired
     private RestTemplate restTemplate;
+
 
     public List<ComprobanteDTO> findAll() {
         return crearComprobantesDTO(this.comprobanteRepository.findAll());
@@ -215,3 +219,5 @@ public class ComprobanteServiceImplem implements ComprobanteService {
     }
 
 }
+
+

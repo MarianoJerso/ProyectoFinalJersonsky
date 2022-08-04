@@ -1,9 +1,11 @@
-package model;
+package com.proyecto.jersonsky.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Set;
+
+import static javax.persistence.FetchType.*;
 
 @Entity
 @Table(name="COMPROBANTES")
@@ -26,7 +28,7 @@ public class Comprobante {
     @JoinColumn(name="CLIENTEID")
     private Cliente cliente;
 
-    @OneToMany(mappedBy="COMPROBANTES", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="comprobante", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Linea> lineas;
 
     public Comprobante() {

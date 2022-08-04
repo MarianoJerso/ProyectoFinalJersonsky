@@ -1,8 +1,7 @@
-package service;
+package com.proyecto.jersonsky.service;
 
-import dto.ComprobanteDTO;
-import model.Cliente;
-import model.Comprobante;
+import com.proyecto.jersonsky.dto.ComprobanteDTO;
+import com.proyecto.jersonsky.model.Comprobante;
 
 import java.util.List;
 

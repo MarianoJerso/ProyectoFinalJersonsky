@@ -1,6 +1,6 @@
-package repository;
+package com.proyecto.jersonsky.repository;
 
-import model.Productos;
+import com.proyecto.jersonsky.model.Productos;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

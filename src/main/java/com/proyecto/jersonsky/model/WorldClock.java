@@ -1,4 +1,4 @@
-package model;
+package com.proyecto.jersonsky.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

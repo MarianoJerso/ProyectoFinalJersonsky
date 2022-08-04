@@ -1,11 +1,9 @@
-package service;
+package com.proyecto.jersonsky.service;
 
-import model.Cliente;
-import model.Productos;
+import com.proyecto.jersonsky.model.Productos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ClienteRepository;
-import repository.ProductosRepository;
+import com.proyecto.jersonsky.repository.ProductosRepository;
 
 import java.util.List;
 
@@ -47,5 +45,20 @@ public class ProductosServiceImple implements ProductosService {
             return productosRepository.save(productos);
         }
         return null;
+    }
+
+    @Override
+    public String borrarProducto(int id) {
+        copialista= productosRepository.findAll();
+        String texto = "No se encontro el producto con el id:"+id+", por lo tanto no se puede eliminar";
+        if (id<1){return texto;}
+        for(int i=0;i<copialista.size();i++){
+            if (id==copialista.get(i).getProductoid()){
+                texto = "El producto: "+copialista.get(i).getDescripcion()+", con el id: "+id+" ha sido eliminado ";
+                productosRepository.deleteById(id);
+                i=copialista.size();
+            }
+        }
+        return texto;
     }
 }

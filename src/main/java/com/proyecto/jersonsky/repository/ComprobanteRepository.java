@@ -1,6 +1,6 @@
-package repository;
+package com.proyecto.jersonsky.repository;
 
-import model.Comprobante;
+import com.proyecto.jersonsky.model.Comprobante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,9 @@
-package controller;
+package com.proyecto.jersonsky.controller;
 
-import model.Cliente;
-import model.Productos;
+import com.proyecto.jersonsky.model.Productos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.ProductosService;
+import com.proyecto.jersonsky.service.ProductosService;
 
 import java.util.List;
 
@@ -29,5 +28,9 @@ public class ProductosController {
     @PostMapping("*/actualizar")
     public Productos actualizarProducto(@RequestBody Productos productos){
         return productosService.actualizarProducto(productos);
+    }
+
+    @DeleteMapping("/borrar/{id}")
+    public String borrarProducto (@PathVariable int id){String texto =productosService.borrarProducto(id); return texto;
     }
 }
